@@ -3,12 +3,12 @@
   "version": "1.5",
   "license": "BSD",
   "summary": "Bridges NSLogger and CocoaLumberjack.",
-  "homepage": "https://github.com/steipete/NSLogger-CocoaLumberjack-connector",
+  "homepage": "https://github.com/plumzi/NSLogger-CocoaLumberjack-connector",
   "authors": {
     "Peter Steinberger": "steipete@gmail.com"
   },
   "source": {
-    "git": "https://github.com/steipete/NSLogger-CocoaLumberjack-connector.git",
+    "git": "https://github.com/plumzi/NSLogger-CocoaLumberjack-connector.git",
     "tag": "1.5"
   },
   "platforms": {

@@ -15,6 +15,8 @@
 /// should setup before `- (void)start`
 - (void)setupWithBonjourServiceName:(NSString *)serviceName;
 
+- (void)setupWithHostAddress:(NSString *)host port:(int)port;
+
 - (void)start;
 - (void)stop;
 

@@ -51,6 +51,21 @@ static DDNSLoggerLogger *sharedInstance;
     }
 }
 
+-(void)setupWithHostAddress:(NSString *)host port:(int)port
+{
+    BOOL running = self.running;
+    [self stop];
+    LoggerSetOptions( NULL,kLoggerOption_BufferLogsUntilConnection
+                     | kLoggerOption_BrowseBonjour
+                     | kLoggerOption_BrowseOnlyLocalDomain
+                     | kLoggerOption_UseSSL);
+    
+    LoggerSetViewerHost(NULL, (__bridge CFStringRef)host, port);
+    if (running) {
+        [self start];
+    }
+}
+
 - (void)logMessage:(DDLogMessage *)logMessage {
     NSString *logMsg = logMessage.message;
 
